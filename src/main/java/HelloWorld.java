@@ -16,7 +16,7 @@ import org.json.simple.JSONObject;
 public class HelloWorld extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
        req.setCharacterEncoding("utf8");
 	  resp.setContentType("application/json");
