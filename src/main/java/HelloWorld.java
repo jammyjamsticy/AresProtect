@@ -23,7 +23,7 @@ public class HelloWorld extends HttpServlet {
       PrintWriter out = resp.getWriter();
       //JSONObject jsonObj = (JSONObject) JSONValue.parse(request.getParameter("para"));
       //System.out.println(jsonObj.get("message"));
-	    	  System.out.println("request parameter :: "+req.getParameter("result"));
+	    	  System.out.println("request parameter :: "+req.getParameterNames());
       JSONObject obj = new JSONObject();
       obj.put("speech", "hello from server");
       obj.put("displayText", "hello from server");
