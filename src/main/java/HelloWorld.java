@@ -6,7 +6,7 @@ import org.eclipse.jetty.servlet.*;
 import org.json.simple.JSONObject;
 import java.io.IOException;
 import java.io.PrintWriter;
-
+import java.util.Enumeration;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -24,6 +24,14 @@ public class HelloWorld extends HttpServlet {
       //JSONObject jsonObj = (JSONObject) JSONValue.parse(request.getParameter("para"));
       //System.out.println(jsonObj.get("message"));
 	    	  System.out.println("request parameter :: "+req.getParameterNames());
+	          Enumeration en=req.getParameterNames();
+		while(en.hasMoreElements())
+		{
+			Object objOri=en.nextElement();
+			String param=(String)objOri;
+			String value=req.getParameter(param);
+			System.out.println("Parameter Name is '"+param+"' and Parameter Value is '"+value+"'");
+		}	
       JSONObject obj = new JSONObject();
       obj.put("speech", "hello from server");
       obj.put("displayText", "hello from server");
