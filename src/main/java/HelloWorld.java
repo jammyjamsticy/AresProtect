@@ -29,6 +29,22 @@ public class HelloWorld extends HttpServlet {
       obj.put("source", "java");
       out.print(obj);
     }
+
+	   @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+       req.setCharacterEncoding("utf8");
+	  resp.setContentType("application/json");
+      PrintWriter out = resp.getWriter();
+      //JSONObject jsonObj = (JSONObject) JSONValue.parse(request.getParameter("para"));
+      //System.out.println(jsonObj.get("message"));
+      JSONObject obj = new JSONObject();
+      obj.put("speech", "hello from server");
+      obj.put("displayText", "hello from server");
+      obj.put("source", "java");
+      out.print(obj);
+    }
+	
 	  public static void main(String[] args) throws Exception{
         Server server = new Server(Integer.valueOf(System.getenv("PORT")));
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
