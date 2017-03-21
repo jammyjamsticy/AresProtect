@@ -36,6 +36,7 @@ public class HelloWorld extends HttpServlet {
       obj.put("speech", "hello from server");
       obj.put("displayText", "hello from server");
       obj.put("source", "java");
+	     obj.put("title", "Buy Insurance");
       out.print(obj);
     }
 
