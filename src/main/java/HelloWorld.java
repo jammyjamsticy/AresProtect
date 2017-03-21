@@ -53,7 +53,7 @@ public class HelloWorld extends HttpServlet {
 
     // convert user object to json string and return it 
     String jsonStr= mapper.writeValueAsString(ojMessages);
-    String jsonFormattedString = jsonStr.replaceAll("\\", "");
+    String jsonFormattedString = jsonStr.replaceAll("\\\\", "");
 		obj.put("messages",jsonFormattedString);
 	    System.out.println("jsonFormattedString :: "+jsonFormattedString);
 		out.print(obj);
