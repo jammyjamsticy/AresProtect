@@ -99,6 +99,7 @@ public class HelloWorld extends HttpServlet {
 		System.out.println("jsonFormattedString :: "+jsonFormattedString);
 		
       out.print(obj);
+	    System.out.println("obj response :: "+obj);
     }
 	
 	  public static void main(String[] args) throws Exception{
