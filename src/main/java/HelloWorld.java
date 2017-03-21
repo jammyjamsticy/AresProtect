@@ -42,9 +42,9 @@ public class HelloWorld extends HttpServlet {
 	        Messages[] ojMessages = new Messages[1];
 		Buttons[] ojButtons = new Buttons[1];
 	    ojButtons[0]=new Buttons();
-	//	ojButtons[0].setText("Buy now");
-	//	ojButtons[0].setPostback("Buy");
-	//	ojMessages.setButtons(ojButtons);
+		ojButtons[0].setText("Buy now");
+		ojButtons[0].setPostback("Buy");
+		ojMessages.setButtons(ojButtons);
 	    ojMessages[0] = new Messages();
 		ojMessages[0].setTitle("Buy Insurance");
 		ojMessages[0].setImageUrl("http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG");
@@ -80,9 +80,9 @@ public class HelloWorld extends HttpServlet {
 	  Messages[] ojMessages = new Messages[1];
 		Buttons[] ojButtons = new Buttons[1];
 	    ojButtons[0]=new Buttons();
-	//	ojButtons[0].setText("Buy now");
-	//	ojButtons[0].setPostback("Buy");
-	//	ojMessages.setButtons(ojButtons);
+		ojButtons[0].setText("Buy now");
+		ojButtons[0].setPostback("Buy");
+		ojMessages.setButtons(ojButtons);
 	     ojMessages[0] = new Messages();
 		ojMessages[0].setTitle("Buy Insurance");
 		ojMessages[0].setImageUrl("http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG");
