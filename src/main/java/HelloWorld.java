@@ -12,9 +12,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.json.simple.JSONObject;
-import com.fasterxml.jackson.databind.ObjectMapper; 
-import com.fasterxml.jackson.databind.ObjectReader; 
-import com.fasterxml.jackson.databind.ObjectWriter; 
+import org.codehaus.jackson.JsonGenerationException;
+ import org.codehaus.jackson.map.JsonMappingException;
+ import org.codehaus.jackson.map.ObjectMapper;
 
 public class HelloWorld extends HttpServlet {
 
@@ -47,8 +47,12 @@ public class HelloWorld extends HttpServlet {
 		ojMessages.setTitle("Buy Insurance");
 		ojMessages.setImageUrl("http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG");
 		ojMessages.setType("1"); 
-	    ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
-String json = ow.writeValueAsString(object);
+	   ObjectMapper mapper = new ObjectMapper();
+
+
+    // convert user object to json string and return it 
+    String json= mapper.writeValueAsString(ojMessages);
+
 		obj.put("messages",json);
 		out.print(obj);
     }
@@ -77,8 +81,12 @@ String json = ow.writeValueAsString(object);
 		ojMessages.setTitle("Buy Insurance");
 		ojMessages.setImageUrl("http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG");
 		ojMessages.setType("1"); 
-	 ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
-String json = ow.writeValueAsString(object);
+	 ObjectMapper mapper = new ObjectMapper();
+
+
+    // convert user object to json string and return it 
+    String json= mapper.writeValueAsString(ojMessages);
+
 		obj.put("messages",json);
 		
 		
