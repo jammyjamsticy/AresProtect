@@ -49,7 +49,7 @@ public class HelloWorld extends HttpServlet {
 		ojMessages[0].setTitle("Buy Insurance");
 		ojMessages[0].setImageUrl("http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG");
 		ojMessages[0].setType("1"); 
-	    ojMessages.setButtons(ojButtons);
+	    ojMessages[0].setButtons(ojButtons);
 	   ObjectMapper mapper = new ObjectMapper();
 
 
@@ -87,7 +87,7 @@ public class HelloWorld extends HttpServlet {
 		ojMessages[0].setTitle("Buy Insurance");
 		ojMessages[0].setImageUrl("http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG");
 		ojMessages[0].setType("1"); 
-	    ojMessages.setButtons(ojButtons);
+	    ojMessages[0].setButtons(ojButtons);
 	 ObjectMapper mapper = new ObjectMapper();
 
 
