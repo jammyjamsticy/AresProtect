@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.json.simple.JSONObject;
+import com.fasterxml.jackson.databind.ObjectMapper; 
+import com.fasterxml.jackson.databind.ObjectReader; 
+import com.fasterxml.jackson.databind.ObjectWriter; 
 
 public class HelloWorld extends HttpServlet {
 
@@ -44,7 +47,9 @@ public class HelloWorld extends HttpServlet {
 		ojMessages.setTitle("Buy Insurance");
 		ojMessages.setImageUrl("http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG");
 		ojMessages.setType("1"); 
-		obj.put("messages",ojMessages);
+	    ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
+String json = ow.writeValueAsString(object);
+		obj.put("messages",json);
 		out.print(obj);
     }
 
@@ -72,7 +77,9 @@ public class HelloWorld extends HttpServlet {
 		ojMessages.setTitle("Buy Insurance");
 		ojMessages.setImageUrl("http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG");
 		ojMessages.setType("1"); 
-		obj.put("messages",ojMessages);
+	 ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
+String json = ow.writeValueAsString(object);
+		obj.put("messages",json);
 		
 		
       out.print(obj);
