@@ -36,7 +36,7 @@ public class HelloWorld extends HttpServlet {
 			System.out.println("Parameter Name is '"+param+"' and Parameter Value is '"+value+"'");
 		}	
 		JSONObject obj = new JSONObject();
-		obj.put("speech", "hello from server");
+		//obj.put("speech", "hello from server");
 		//obj.put("displayText", "hello from server");
 		obj.put("source", "java");
 	        Messages[] ojMessages = new Messages[1];
@@ -56,7 +56,7 @@ public class HelloWorld extends HttpServlet {
     // convert user object to json string and return it 
     String jsonStr= mapper.writeValueAsString(ojMessages);
     String jsonFormattedString = jsonStr.replaceAll("\\\\", "");
-	//	obj.put("messages",jsonFormattedString);
+		obj.put("messages",jsonFormattedString);
 	    System.out.println("jsonFormattedString :: "+jsonFormattedString);
 		out.print(obj);
     }
@@ -74,7 +74,7 @@ public class HelloWorld extends HttpServlet {
     
 		     
       JSONObject obj = new JSONObject();
-      obj.put("speech", "hello from server");
+     // obj.put("speech", "hello from server");
     //  obj.put("displayText", "hello from server");
       obj.put("source", "java");
 	  Messages[] ojMessages = new Messages[1];
@@ -95,7 +95,7 @@ public class HelloWorld extends HttpServlet {
     String jsonStr= mapper.writeValueAsString(ojMessages);
      String jsonFormattedString = jsonStr.replaceAll("\\\\", "");
 
-	//	obj.put("messages",jsonFormattedString);
+		obj.put("messages",jsonFormattedString);
 		System.out.println("jsonFormattedString :: "+jsonFormattedString);
 		
       out.print(obj);
