@@ -44,6 +44,7 @@ public class HelloWorld extends HttpServlet {
 	//	ojButtons[0].setText("Buy now");
 	//	ojButtons[0].setPostback("Buy");
 	//	ojMessages.setButtons(ojButtons);
+	    ojMessages[0] = new Messages();
 		ojMessages[0].setTitle("Buy Insurance");
 		ojMessages[0].setImageUrl("http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG");
 		ojMessages[0].setType("1"); 
@@ -53,7 +54,7 @@ public class HelloWorld extends HttpServlet {
     // convert user object to json string and return it 
     String json= mapper.writeValueAsString(ojMessages);
 
-		obj.put("data",json);
+		obj.put("messages",json);
 		out.print(obj);
     }
 
@@ -78,6 +79,7 @@ public class HelloWorld extends HttpServlet {
 	//	ojButtons[0].setText("Buy now");
 	//	ojButtons[0].setPostback("Buy");
 	//	ojMessages.setButtons(ojButtons);
+	     ojMessages[0] = new Messages();
 		ojMessages[0].setTitle("Buy Insurance");
 		ojMessages[0].setImageUrl("http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG");
 		ojMessages[0].setType("1"); 
@@ -87,7 +89,7 @@ public class HelloWorld extends HttpServlet {
     // convert user object to json string and return it 
     String json= mapper.writeValueAsString(ojMessages);
 
-		obj.put("data",json);
+		obj.put("messages",json);
 		
 		
       out.print(obj);
