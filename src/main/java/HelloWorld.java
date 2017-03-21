@@ -37,7 +37,7 @@ public class HelloWorld extends HttpServlet {
 		}	
 		JSONObject obj = new JSONObject();
 		obj.put("speech", "hello from server");
-		obj.put("displayText", "hello from server");
+		//obj.put("displayText", "hello from server");
 		obj.put("source", "java");
 	        Messages[] ojMessages = new Messages[1];
 		Buttons[] ojButtons = new Buttons[1];
@@ -75,7 +75,7 @@ public class HelloWorld extends HttpServlet {
 		     
       JSONObject obj = new JSONObject();
       obj.put("speech", "hello from server");
-      obj.put("displayText", "hello from server");
+    //  obj.put("displayText", "hello from server");
       obj.put("source", "java");
 	  Messages[] ojMessages = new Messages[1];
 		Buttons[] ojButtons = new Buttons[1];
