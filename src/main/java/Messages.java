@@ -7,6 +7,14 @@ public class Messages
     private Buttons[] buttons;
 
     private String type;
+    	 private String speech;
+	public String getSpeech() {
+		return speech;
+	}
+
+	public void setSpeech(String speech) {
+		this.speech = speech;
+	}
 
     public String getTitle ()
     {
