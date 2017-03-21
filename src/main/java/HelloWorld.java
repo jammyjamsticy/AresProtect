@@ -44,7 +44,7 @@ public class HelloWorld extends HttpServlet {
 		ojMessages.setTitle("Buy Insurance");
 		ojMessages.setImageUrl("http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG");
 		ojMessages.setType("1"); 
-		obj.put("data",ojMessages);
+		obj.put("messages",ojMessages);
 		out.print(obj);
     }
 
@@ -72,7 +72,7 @@ public class HelloWorld extends HttpServlet {
 		ojMessages.setTitle("Buy Insurance");
 		ojMessages.setImageUrl("http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG");
 		ojMessages.setType("1"); 
-		obj.put("data",ojMessages);
+		obj.put("messages",ojMessages);
 		
 		
       out.print(obj);
