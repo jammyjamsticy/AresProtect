@@ -32,20 +32,21 @@ public class HelloWorld extends HttpServlet {
 			String value=req.getParameter(param);
 			System.out.println("Parameter Name is '"+param+"' and Parameter Value is '"+value+"'");
 		}	
-      JSONObject obj = new JSONObject();
-      obj.put("speech", "hello from server");
-      obj.put("displayText", "hello from server");
-      obj.put("source", "java");
-Messages ojMessages = new Messages();
-Buttons[] ojButtons = new Buttons[1];
-ojButtons[0].setText("Buy now");
-ojButtons[0].setPostback("Buy");
-ojMessages.setButtons(ojButtons);
-ojMessages.setTitle("Buy Insurance");
-ojMessages.setImageUrl("http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG");
-ojMessages.setType("1"); 
-    //  obj.put("data", "\"messages\":[{\"title\":\"Buy Insurance\",\"buttons\":[{  \"text\":\"Buy Now\",  \"postback\":\"Buy\"}],\"type\":1},{\"title\":\"What's New\",\"imageUrl\":\"http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG\",\"buttons\":[{  \"text\":\"View\",  \"postback\":\"View\"}],\"type\":1}]");
-      out.print(obj);
+		JSONObject obj = new JSONObject();
+		obj.put("speech", "hello from server");
+		obj.put("displayText", "hello from server");
+		obj.put("source", "java");
+		Messages ojMessages = new Messages();
+		Buttons[] ojButtons = new Buttons[1];
+		ojButtons[0].setText("Buy now");
+		ojButtons[0].setPostback("Buy");
+		ojMessages.setButtons(ojButtons);
+		ojMessages.setTitle("Buy Insurance");
+		ojMessages.setImageUrl("http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG");
+		ojMessages.setType("1"); 
+		obj.put("data",ojMessages);
+		//  obj.put("data", "\"messages\":[{\"title\":\"Buy Insurance\",\"buttons\":[{  \"text\":\"Buy Now\",  \"postback\":\"Buy\"}],\"type\":1},{\"title\":\"What's New\",\"imageUrl\":\"http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG\",\"buttons\":[{  \"text\":\"View\",  \"postback\":\"View\"}],\"type\":1}]");
+		out.print(obj);
     }
 
 	   @Override
