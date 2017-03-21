@@ -2,6 +2,8 @@ public class Messages
 {
     private String title;
 
+    private String imageUrl;
+
     private Buttons[] buttons;
 
     private String type;
@@ -14,6 +16,16 @@ public class Messages
     public void setTitle (String title)
     {
         this.title = title;
+    }
+
+    public String getImageUrl ()
+    {
+        return imageUrl;
+    }
+
+    public void setImageUrl (String imageUrl)
+    {
+        this.imageUrl = imageUrl;
     }
 
     public Buttons[] getButtons ()
@@ -39,6 +51,6 @@ public class Messages
     @Override
     public String toString()
     {
-        return "ClassPojo [title = "+title+", buttons = "+buttons+", type = "+type+"]";
+        return "ClassPojo [title = "+title+", imageUrl = "+imageUrl+", buttons = "+buttons+", type = "+type+"]";
     }
 }
