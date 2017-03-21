@@ -60,9 +60,11 @@ public class HelloWorld extends HttpServlet {
     String jsonFormattedString = jsonStr.replaceAll("\\\\", "");
 	//	obj.put("messages",jsonFormattedString);
 	   // System.out.println("jsonFormattedString :: "+jsonFormattedString);
-	    obj.put("speech", jsonFormattedString);
-		obj.put("displayText", jsonFormattedString);
-		obj.put("source", "java");
+//	    obj.put("speech", jsonFormattedString);
+//		obj.put("displayText", jsonFormattedString);
+    obj.put("speech", "hello from server");
+      obj.put("displayText", "hello from server");
+	    obj.put("source", "java");
 		out.print(obj);
 	    System.out.println("obj response :: "+obj);
     }
@@ -80,8 +82,8 @@ public class HelloWorld extends HttpServlet {
     
 		     
       JSONObject obj = new JSONObject();
-  //    obj.put("speech", "hello from server");
-    //  obj.put("displayText", "hello from server");
+      obj.put("speech", "hello from server");
+      obj.put("displayText", "hello from server");
       obj.put("source", "java");
 	  Messages[] ojMessages = new Messages[2];
 		Buttons[] ojButtons = new Buttons[1];
@@ -105,8 +107,8 @@ public class HelloWorld extends HttpServlet {
     // convert user object to json string and return it 
     String jsonStr= mapper.writeValueAsString(ojMessages);
      String jsonFormattedString = jsonStr.replaceAll("\\\\", "");
-  obj.put("speech", jsonFormattedString);
-		obj.put("displayText", jsonFormattedString);
+  //obj.put("speech", jsonFormattedString);
+//		obj.put("displayText", jsonFormattedString);
 	//	obj.put("messages",jsonFormattedString);
 		//System.out.println("jsonFormattedString :: "+jsonFormattedString);
 		
