@@ -48,9 +48,5 @@ public class Messages
         this.type = type;
     }
 
-    @Override
-    public String toString()
-    {
-        return "ClassPojo [title = "+title+", imageUrl = "+imageUrl+", buttons = "+buttons+", type = "+type+"]";
-    }
+   
 }
