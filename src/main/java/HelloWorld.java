@@ -64,14 +64,14 @@ public class HelloWorld extends HttpServlet {
       obj.put("speech", "hello from server");
       obj.put("displayText", "hello from server");
       obj.put("source", "java");
-	//Messages ojMessages = new Messages();
-	//	Buttons[] ojButtons = new Buttons[1];
-	//	ojButtons[0].setText("Buy now");
-	//	ojButtons[0].setPostback("Buy");
-	//	ojMessages.setButtons(ojButtons);
-	//	ojMessages.setTitle("Buy Insurance");
-	//	ojMessages.setImageUrl("http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG");
-	//	ojMessages.setType("1"); 
+	Messages ojMessages = new Messages();
+		Buttons[] ojButtons = new Buttons[1];
+		ojButtons[0].setText("Buy now");
+		ojButtons[0].setPostback("Buy");
+		ojMessages.setButtons(ojButtons);
+		ojMessages.setTitle("Buy Insurance");
+		ojMessages.setImageUrl("http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG");
+		ojMessages.setType("1"); 
 	//	obj.put("data",ojMessages);
 		
 		
