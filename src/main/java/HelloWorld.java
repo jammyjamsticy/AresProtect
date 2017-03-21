@@ -46,6 +46,7 @@ public class HelloWorld extends HttpServlet {
 		ojButtons[0].setPostback("Buy");
 	    ojMessages[0] = new Messages();
 	    ojMessages[0].setType("0"); 
+	     ojMessages[0].setSpeech("hello from server");
 	     //"speech": "hello from server"
 		ojMessages[1] = new Messages();
 	    
@@ -81,17 +82,22 @@ public class HelloWorld extends HttpServlet {
       obj.put("speech", "hello from server");
       obj.put("displayText", "hello from server");
       obj.put("source", "java");
-	  Messages[] ojMessages = new Messages[1];
+	  Messages[] ojMessages = new Messages[2];
 		Buttons[] ojButtons = new Buttons[1];
 	    ojButtons[0]=new Buttons();
 		ojButtons[0].setText("Buy now");
 		ojButtons[0].setPostback("Buy");
 	
-	     ojMessages[0] = new Messages();
-		ojMessages[0].setTitle("Buy Insurance");
-		ojMessages[0].setImageUrl("http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG");
-		ojMessages[0].setType("1"); 
-	    ojMessages[0].setButtons(ojButtons);
+	      ojMessages[0] = new Messages();
+	    ojMessages[0].setType("0"); 
+	     ojMessages[0].setSpeech("hello from server");
+	     //"speech": "hello from server"
+		ojMessages[1] = new Messages();
+	    
+		ojMessages[1].setTitle("Buy Insurance");
+		ojMessages[1].setImageUrl("http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG");
+		ojMessages[1].setType("1"); 
+	    ojMessages[1].setButtons(ojButtons);
 	 ObjectMapper mapper = new ObjectMapper();
 
 
