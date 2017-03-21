@@ -46,14 +46,14 @@ public class HelloWorld extends HttpServlet {
 	//	ojMessages.setButtons(ojButtons);
 	    ojMessages[0] = new Messages();
 		ojMessages[0].setTitle("Buy Insurance");
-		ojMessages[0].setImageUrl("http:\\/\\/bot.shakunairasoftware.com\\/AresProtect\\/whats_new.PNG";");
+		ojMessages[0].setImageUrl("http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG");
 		ojMessages[0].setType("1"); 
 	   ObjectMapper mapper = new ObjectMapper();
 
 
     // convert user object to json string and return it 
     String jsonStr= mapper.writeValueAsString(ojMessages);
-    String jsonFormattedString = jsonStr.replaceAll("\\\\", "");
+    String jsonFormattedString = jsonStr.replaceAll("\\", "");
 		obj.put("messages",jsonFormattedString);
 		out.print(obj);
     }
