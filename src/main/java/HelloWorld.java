@@ -53,7 +53,7 @@ public class HelloWorld extends HttpServlet {
 
     // convert user object to json string and return it 
     String jsonStr= mapper.writeValueAsString(ojMessages);
-    String jsonFormattedString = jsonStr.replace("\\\"", "\"");
+    String jsonFormattedString = jsonStr.replaceAll("\\\"", "\"");
 		obj.put("messages",jsonFormattedString);
 		out.print(obj);
     }
@@ -88,7 +88,7 @@ public class HelloWorld extends HttpServlet {
 
     // convert user object to json string and return it 
     String jsonStr= mapper.writeValueAsString(ojMessages);
-    String jsonFormattedString = jsonStr.replace("\\\"", "\"");
+    String jsonFormattedString = jsonStr.replaceAll("\\\"", "\"");
 
 		obj.put("messages",jsonFormattedString);
 		
