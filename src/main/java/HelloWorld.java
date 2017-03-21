@@ -36,7 +36,7 @@ public class HelloWorld extends HttpServlet {
       obj.put("speech", "hello from server");
       obj.put("displayText", "hello from server");
       obj.put("source", "java");
-	     obj.put("title", "Buy Insurance");
+	     obj.put("data", "\"messages\":[{\"title\":"Buy Insurance","buttons":[{  \"text\":\"Buy Now\",  \"postback\":\"Buy\"}],\"type\":1},{\"title\":\"What's New\",\"imageUrl\":\"http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG\",\"buttons\":[{  \"text\":\"View\",  \"postback\":\"View\"}],\"type\":1}]");
       out.print(obj);
     }
 
