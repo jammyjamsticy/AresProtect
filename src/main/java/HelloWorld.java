@@ -46,7 +46,7 @@ public class HelloWorld extends HttpServlet {
 	//	ojMessages.setButtons(ojButtons);
 	    ojMessages[0] = new Messages();
 		ojMessages[0].setTitle("Buy Insurance");
-		ojMessages[0].setImageUrl("http://bot.shakunairasoftware.com/AresProtect/whats_new.PNG");
+		ojMessages[0].setImageUrl("whats_new.PNG");
 		ojMessages[0].setType("1"); 
 	   ObjectMapper mapper = new ObjectMapper();
 
